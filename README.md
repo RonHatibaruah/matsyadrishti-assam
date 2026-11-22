@@ -4,6 +4,10 @@
 **Government of Assam • Directorate of Fisheries**  
 **North East Seva First Innovation Challenge (NESFIC 2026) — Problem Statement: `NESFIC-D-33`**
 
+🌐 **Live Production Application:** [https://matsyadrishti-assam.pages.dev](https://matsyadrishti-assam.pages.dev)  
+📦 **GitHub Repository:** [https://github.com/RonHatibaruah/matsyadrishti-assam](https://github.com/RonHatibaruah/matsyadrishti-assam)
+
+[![Live on Cloudflare Pages](https://img.shields.io/badge/Deployed-Cloudflare%20Pages-F38020.svg?logo=cloudflare)](https://matsyadrishti-assam.pages.dev)
 [![React](https://img.shields.io/badge/React-18-blue.svg)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-blue.svg)](https://www.typescriptlang.org/)
 [![Vite](https://img.shields.io/badge/Vite-6-purple.svg)](https://vite.dev/)
