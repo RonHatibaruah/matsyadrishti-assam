@@ -266,13 +266,16 @@ Intellectual Property & Dependencies:
   {
     number: 12,
     title: "12. Resources, risks & pilot validation",
-    wordCount: "450",
+    wordCount: "445",
     limit: "500 words",
-    content: `1. Indicative Development & Validation Cost Drivers:
-- Software Engineering & Cloud Infrastructure (40%): Development of the PWA field client, PostGIS database, statistical computation microservices, automated Earth Observation ingest pipeline, and MeitY-cloud hosting.
-- Field Immersion, Training & Hardware (25%): Equipping 20 pilot Fishery Demonstrators with ruggedized Android tablets, conducting district-level capacity building workshops, and bilingual user manual printing.
-- AI Model Training & Annotation (15%): Field dataset collection, expert taxonomic labeling of 15,000 fish specimens across North-East fish landing sites, and hardware compute for training.
-- Third-Party Security Audits & Pilot Validation (20%): Independent CERT-In empanelled VAPT audit, field operational travel across pilot districts, and statistical validation reporting.
+    content: `1. Indicative Resource & Budget Allocation (Total Grant: ₹40.0 Lakhs):
+The ₹40 Lakhs NESFIC problem statement grant is strategically allocated across 5 cost drivers, prioritizing core software engineering (₹20.0 Lakhs / 50%):
+- Software Stack Development & Core Engineering Team (₹20.0 Lakhs / 50.0%): Lead system architect, biostatistician, PostGIS geospatial database engineers, and offline PWA frontend development.
+- Field Immersion, Hardware & Demonstrator Capacity Building (₹8.0 Lakhs / 20.0%): Procurement of 20 ruggedized Android tablets for field demonstrators, district training workshops in Kamrup and Nagaon, and bilingual manual publication.
+- Edge-AI Model Training, Annotation & Compute (₹5.0 Lakhs / 12.5%): On-ground collection and expert taxonomic labeling of 15,000 local freshwater fish specimen images; GPU compute for TFLite quantization.
+- Multi-Zone Pilot Operations & Cooperative Travel (₹4.0 Lakhs / 10.0%): Field demonstrator travel, enumerator stipends, and stakeholder sensitization with Beel Fishery Cooperative Societies across 3 agro-ecological zones.
+- Third-Party Security Audits & State Cloud Handover (₹3.0 Lakhs / 7.5%): CERT-In empanelled VAPT vulnerability assessment and Safe-to-Host certification for Assam State Data Centre deployment.
+Total Grant Allocation: ₹40,00,000 (100.0%).
 
 2. Key Risks & Mitigations:
 - Remote Connectivity Deficit: Full offline-first PWA with local IndexedDB storage; automatic background sync when network is detected; SMS fallback sync for critical daily totals.
