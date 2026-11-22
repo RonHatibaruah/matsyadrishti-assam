@@ -5,11 +5,12 @@ import { FieldCASLogbook } from './components/FieldCASLogbook';
 import { RaisingFactorEngineView } from './components/RaisingFactorEngineView';
 import { WaterbodyGISMap } from './components/WaterbodyGISMap';
 import { ProposalViewer } from './components/ProposalViewer';
+import { ProofOfWorkDossier } from './components/ProofOfWorkDossier';
 import { INITIAL_CATCH_RECORDS } from './services/mockData';
 import { CatchAssessmentRecord } from './types/fishery';
 
 export function App() {
-  const [activeTab, setActiveTab] = useState<'dashboard' | 'field-cas' | 'raising-engine' | 'gis-map' | 'proposal'>('dashboard');
+  const [activeTab, setActiveTab] = useState<'dashboard' | 'field-cas' | 'raising-engine' | 'gis-map' | 'proposal' | 'dossier'>('dashboard');
   const [userRole, setUserRole] = useState<'demonstrator' | 'dfdo' | 'directorate'>('directorate');
   const [records, setRecords] = useState<CatchAssessmentRecord[]>(INITIAL_CATCH_RECORDS);
 
@@ -64,6 +65,10 @@ export function App() {
 
         {activeTab === 'proposal' && (
           <ProposalViewer />
+        )}
+
+        {activeTab === 'dossier' && (
+          <ProofOfWorkDossier />
         )}
       </main>
 

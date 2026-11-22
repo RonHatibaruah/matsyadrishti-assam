@@ -12,8 +12,8 @@ import {
 } from 'lucide-react';
 
 interface NavbarProps {
-  activeTab: 'dashboard' | 'field-cas' | 'raising-engine' | 'gis-map' | 'proposal';
-  setActiveTab: (tab: 'dashboard' | 'field-cas' | 'raising-engine' | 'gis-map' | 'proposal') => void;
+  activeTab: 'dashboard' | 'field-cas' | 'raising-engine' | 'gis-map' | 'proposal' | 'dossier';
+  setActiveTab: (tab: 'dashboard' | 'field-cas' | 'raising-engine' | 'gis-map' | 'proposal' | 'dossier') => void;
   pendingSyncCount: number;
   userRole: 'demonstrator' | 'dfdo' | 'directorate';
   setUserRole: (role: 'demonstrator' | 'dfdo' | 'directorate') => void;
@@ -140,7 +140,19 @@ export const Navbar: React.FC<NavbarProps> = ({
               }`}
             >
               <FileText className="w-4 h-4" />
-              <span>NESFIC Proposal (12 Parts)</span>
+              <span>Proposal (12 Parts)</span>
+            </button>
+
+            <button
+              onClick={() => setActiveTab('dossier')}
+              className={`flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-bold transition-all ${
+                activeTab === 'dossier'
+                  ? 'bg-amber-500 text-slate-900 shadow-sm'
+                  : 'text-amber-400 hover:text-amber-300 hover:bg-slate-800 border border-amber-500/30'
+              }`}
+            >
+              <ShieldCheck className="w-4 h-4" />
+              <span>Proof of Work (PDF Dossier)</span>
             </button>
           </nav>
 
@@ -201,6 +213,14 @@ export const Navbar: React.FC<NavbarProps> = ({
           }`}
         >
           Proposal Content
+        </button>
+        <button
+          onClick={() => setActiveTab('dossier')}
+          className={`px-3 py-1.5 whitespace-nowrap rounded font-bold ${
+            activeTab === 'dossier' ? 'bg-amber-500 text-slate-900' : 'text-amber-400'
+          }`}
+        >
+          PDF Dossier (10 Figs)
         </button>
       </div>
     </header>
