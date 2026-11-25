@@ -110,12 +110,19 @@ export const ProofOfWorkDossier: React.FC = () => {
           <div className="text-right text-xs space-y-1 bg-slate-50 p-3 rounded-xl border border-slate-200">
             <p className="font-bold text-slate-900">North East Seva First Innovation Challenge 2026</p>
             <p className="text-slate-600">Track: Fishery Department / Open-Water Biomass</p>
+            <p className="text-blue-900 font-bold">Lead Applicant: <span className="text-blue-700">Ron Hatibaruah</span></p>
             <p className="font-mono text-emerald-700 font-bold">Status: Functional Live Prototype</p>
           </div>
         </div>
 
         {/* Verification Links Table */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
+        <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 text-xs">
+          <div className="bg-amber-50/70 p-3.5 rounded-xl border border-amber-200">
+            <span className="text-[11px] text-amber-700 font-semibold uppercase block">Lead Applicant</span>
+            <span className="font-bold text-slate-900 block mt-0.5">Ron Hatibaruah</span>
+            <span className="text-[10px] text-amber-800">Lead System Architect</span>
+          </div>
+
           <div className="bg-blue-50/70 p-3.5 rounded-xl border border-blue-200">
             <span className="text-[11px] text-blue-700 font-semibold uppercase block">Live Production URL</span>
             <a 
@@ -147,6 +154,7 @@ export const ProofOfWorkDossier: React.FC = () => {
             <span className="font-bold text-purple-950 block mt-0.5">
               ICAR-CIFRI Stratified Sampling
             </span>
+            <span className="text-[10px] text-purple-700">Bulletin No. 130/188</span>
           </div>
         </div>
       </div>
@@ -562,13 +570,20 @@ export const ProofOfWorkDossier: React.FC = () => {
             <p className="text-xs text-slate-400 print:text-slate-600">
               Submitted under Stream 1 (Departmental Challenge NESFIC-D-33), Assam Innovation & Startup Foundation
             </p>
+            <p className="text-xs text-emerald-400 print:text-emerald-800 mt-1 font-semibold">
+              Lead Applicant: <span className="font-bold text-white print:text-slate-900">Ron Hatibaruah</span> (Lead System Architect & Engineering Lead)
+            </p>
           </div>
           <div className="text-right text-xs">
             <span className="font-mono text-emerald-400 font-bold print:text-emerald-700">Verified Evidence Dossier</span>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs pt-2">
+        <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 text-xs pt-2">
+          <div>
+            <span className="text-slate-400 block print:text-slate-500">Lead Applicant:</span>
+            <span className="font-bold text-amber-300 print:text-amber-800">Ron Hatibaruah</span>
+          </div>
           <div>
             <span className="text-slate-400 block print:text-slate-500">Live Application Preview:</span>
             <span className="font-bold text-cyan-300 print:text-cyan-800">https://matsyadrishti-assam.pages.dev</span>

@@ -92,9 +92,14 @@ def build_proof_of_work_pdf(filename="NESFIC_D33_MatsyaDrishti_Proof_of_Work.pdf
     # Verification Metadata Box
     meta_data = [
         [
+            Paragraph("<b>Lead Applicant:</b><br/><b>Ron Hatibaruah</b> (Lead System Architect)", body_style),
             Paragraph("<b>Live Production URL:</b><br/><font color='#0284c7'><u>https://matsyadrishti-assam.pages.dev</u></font>", body_style),
-            Paragraph("<b>GitHub Codebase:</b><br/><font color='#0284c7'><u>https://github.com/RonHatibaruah/matsyadrishti-assam</u></font>", body_style),
             Paragraph("<b>Grant Budget:</b><br/><b>₹40.0 Lakhs</b> (50% Core Software)", body_style)
+        ],
+        [
+            Paragraph("<b>Target Department:</b><br/>Directorate of Fisheries, Govt. of Assam", body_style),
+            Paragraph("<b>GitHub Codebase:</b><br/><font color='#0284c7'><u>https://github.com/RonHatibaruah/matsyadrishti-assam</u></font>", body_style),
+            Paragraph("<b>Scientific Standard:</b><br/>ICAR-CIFRI Bulletin No. 130/188", body_style)
         ]
     ]
     meta_table = Table(meta_data, colWidths=[2.7*inch, 2.7*inch, 1.8*inch])
@@ -255,9 +260,9 @@ def build_proof_of_work_pdf(filename="NESFIC_D33_MatsyaDrishti_Proof_of_Work.pdf
     # Sign-off box
     signoff_text = (
         "<b>Consortium Certification:</b> This Proof of Work document certifies that the MatsyaDrishti Assam "
-        "application has been developed, tested, and validated in code and simulation. The live working prototype is "
-        "accessible at <b>https://matsyadrishti-assam.pages.dev</b> and the open-source code repository is available "
-        "at <b>https://github.com/RonHatibaruah/matsyadrishti-assam</b>. Total grant budget: ₹40.0 Lakhs. Built for Directorate of Fisheries, Govt. of Assam."
+        "application has been designed, engineered, and validated under <b>Lead Applicant Ron Hatibaruah</b> (Lead System Architect). "
+        "The live working prototype is accessible at <b>https://matsyadrishti-assam.pages.dev</b> and the open-source code repository is available "
+        "at <b>https://github.com/RonHatibaruah/matsyadrishti-assam</b>. Total grant budget: ₹40.0 Lakhs (₹20.0 Lakhs Core Software Stack). Built for Directorate of Fisheries, Govt. of Assam."
     )
     story.append(Paragraph(signoff_text, ParagraphStyle('Signoff', parent=body_style, fontSize=7.5, leading=10, textColor=colors.HexColor('#334155'), backColor=colors.HexColor('#f1f5f9'), borderPadding=6, borderWidth=1, borderColor=colors.HexColor('#94a3b8'))))
 
@@ -284,17 +289,22 @@ def build_proposal_document_pdf(filename="NESFIC_D33_Proposal_Document.pdf"):
 
     story = []
 
-    story.append(Paragraph("NORTH EAST SEVA FIRST INNOVATION CHALLENGE 2026", ParagraphStyle('TopH', fontName='Helvetica-Bold', fontSize=8, textColor=colors.HexColor('#b45309'), leading=9)))
+    story.append(Paragraph("NORTH EAST SEVA FIRST INNOVATION CHALLENGE 2026 • STREAM 1 (DEPARTMENTAL CHALLENGE)", ParagraphStyle('TopH', fontName='Helvetica-Bold', fontSize=8, textColor=colors.HexColor('#b45309'), leading=9)))
     story.append(Paragraph("NESFIC-D-33: Complete Illustrated Proposal Document", title_style))
-    story.append(Paragraph("Target Department: Directorate of Fisheries, Government of Assam | System: MatsyaDrishti Assam", subtitle_style))
+    story.append(Paragraph("Target Department: Directorate of Fisheries, Government of Assam | Lead Applicant: Ron Hatibaruah", subtitle_style))
     story.append(HRFlowable(width="100%", thickness=1, color=colors.HexColor('#cbd5e1'), spaceBefore=2, spaceAfter=6))
 
     # Meta banner
     meta_data = [
         [
+            Paragraph("<b>Lead Applicant:</b><br/><b>Ron Hatibaruah</b> (Lead System Architect)", body_style),
             Paragraph("<b>Live Prototype URL:</b><br/><font color='#0284c7'><u>https://matsyadrishti-assam.pages.dev</u></font>", body_style),
-            Paragraph("<b>GitHub Codebase:</b><br/><font color='#0284c7'><u>https://github.com/RonHatibaruah/matsyadrishti-assam</u></font>", body_style),
             Paragraph("<b>Total Grant Budget:</b><br/><b>₹40.0 Lakhs</b> (50% Core Software)", body_style)
+        ],
+        [
+            Paragraph("<b>Target Department:</b><br/>Directorate of Fisheries, Govt. of Assam", body_style),
+            Paragraph("<b>GitHub Codebase:</b><br/><font color='#0284c7'><u>https://github.com/RonHatibaruah/matsyadrishti-assam</u></font>", body_style),
+            Paragraph("<b>Scientific Standard:</b><br/>ICAR-CIFRI Bulletin No. 130/188", body_style)
         ]
     ]
     meta_table = Table(meta_data, colWidths=[2.7*inch, 2.7*inch, 1.8*inch])
@@ -354,8 +364,10 @@ def build_proposal_document_pdf(filename="NESFIC_D33_Proposal_Document.pdf"):
             "<b>Data Governance:</b> Relies exclusively on open satellite data and primary field observations with cryptographic hash-chaining."
         ], os.path.join(FIG_DIR, "fig4_species.png")),
 
-        ("8. Team, manpower & expertise", "434 / 500 words", [
-            "1) Project Director & Inland Fisheries Specialist (Ph.D., 10+ yrs capture fisheries experience). 2) Lead System Architect & Full-Stack Engineer (B.Tech, 8+ yrs distributed systems & PWA). 3) Biostatistician & Algorithmic Modeler (M.Stat, sampling & variance estimation). 4) GIS & Remote Sensing Specialist (M.Tech, Sentinel-2 & PostGIS). 5) AI / Computer Vision Engineer (M.Tech, edge TFLite quantization). 6) Mobile Frontend Developer (React, TypeScript, IndexedDB). 7) QA & CERT-In Security Engineer."
+        ("8. Team, manpower & expertise", "335 / 500 words", [
+            "<b>Lead Applicant & Technical Project Director: Ron Hatibaruah</b> — Lead Full-Stack Architect & Engineering Lead with deep expertise in enterprise distributed systems, offline-first PWA architectures, PostgreSQL/PostGIS spatial databases, and GovTech deployments.",
+            "<b>Core Specialists:</b> 1) Inland Fisheries Specialist (Ph.D., 10+ yrs capture fisheries experience, ICAR-CIFRI methodologies). 2) Biostatistician & Algorithmic Modeler (M.Stat/Ph.D., multi-stage stratified random sampling, Jackknife variance estimation). 3) GIS & Remote Sensing Specialist (M.Tech, automated Sentinel-2 MNDWI & PostGIS). 4) AI/Computer Vision Engineer (M.Tech, PyTorch, edge TFLite quantization). 5) Mobile Frontend Developer (React, TypeScript, IndexedDB). 6) QA & CERT-In Security Engineer.",
+            "<b>Phased Manpower:</b> Phase 1 (Discovery): 4 members. Phase 2 (Design & Modeling): 6 members. Phase 3 (Prototype & AI): 7 members. Phase 4 (Pilot Validation): 5 members. Phase 5 (Security & Handover): 4 members."
         ], None),
 
         ("9. Testing, validation & evidence", "442 / 500 words", [
@@ -426,6 +438,7 @@ def build_methodology_report_pdf(filename="NESFIC_D33_ICAR_CIFRI_Methodology_Ali
     story.append(Paragraph("ICAR-CIFRI METHODOLOGY COMPLIANCE REPORT", ParagraphStyle('TopH', fontName='Helvetica-Bold', fontSize=8, textColor=colors.HexColor('#047857'), leading=10)))
     story.append(Paragraph("Scientific Catch Assessment Alignment: MatsyaDrishti Assam", title_style))
     story.append(Paragraph("Evaluation against ICAR-Central Inland Fisheries Research Institute Bulletin Standards (NESFIC-D-33)", ParagraphStyle('Sub', fontName='Helvetica', fontSize=9, textColor=colors.HexColor('#64748b'), leading=12)))
+    story.append(Paragraph("Target Department: Directorate of Fisheries, Govt. of Assam | Lead Applicant: Ron Hatibaruah | System: MatsyaDrishti Assam", ParagraphStyle('SubLead', fontName='Helvetica-Bold', fontSize=8, textColor=colors.HexColor('#0369a1'), leading=11)))
     story.append(HRFlowable(width="100%", thickness=1, color=colors.HexColor('#cbd5e1'), spaceBefore=2, spaceAfter=8))
 
     story.append(Paragraph("1. Executive Summary & Regulatory Authority", h1_style))

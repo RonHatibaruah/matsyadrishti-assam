@@ -183,13 +183,13 @@ Solution Readiness for Validation:
   {
     number: 8,
     title: "8. Team, manpower & expertise",
-    wordCount: "430",
+    wordCount: "335",
     limit: "500 words",
-    content: `A multidisciplinary team combining software engineering, remote sensing, and inland fisheries biostatistics will execute the project:
+    content: `A multidisciplinary team combining software engineering, remote sensing, and inland fisheries biostatistics will execute the project under Lead Applicant Ron Hatibaruah:
 
 Core Roles & Expertise:
-1. Project Director & Inland Fisheries Specialist (1 FTE): Ph.D./M.F.Sc. in Fisheries Resource Management or Aquatic Ecology; 10+ years experience with Indian inland capture fisheries, ICAR-CIFRI sampling frameworks, and floodplain wetland dynamics.
-2. Lead System Architect & Full-Stack Engineer (1 FTE): B.Tech/M.Tech in Computer Science; 8+ years building enterprise web/mobile systems, distributed architectures, PWA offline sync, PostgreSQL/PostGIS spatial databases, and microservices.
+1. Lead Applicant & Technical Project Director — Ron Hatibaruah: Lead Full-Stack Architect & Engineering Lead with deep expertise in enterprise distributed systems, offline-first PWA architectures, PostgreSQL/PostGIS spatial databases, and GovTech deployments.
+2. Inland Fisheries Specialist (1 FTE): Ph.D./M.F.Sc. in Fisheries Resource Management or Aquatic Ecology; 10+ years experience with Indian inland capture fisheries, ICAR-CIFRI sampling frameworks, and floodplain wetland dynamics.
 3. Biostatistician & Algorithmic Modeler (1 FTE): M.Stat/Ph.D. in Biostatistics; specialist in multi-stage stratified random sampling, CPUE modeling, Jackknife/Bootstrap variance estimation, and Bayesian inference for sparse catch datasets.
 4. GIS & Remote Sensing Specialist (1 FTE): M.Tech/M.Sc. in Geoinformatics; expert in automated Earth Observation pipelines (Sentinel-2/Copernicus), Google Earth Engine API, hydrological modeling, and PostGIS spatial queries.
 5. Computer Vision / AI Engineer (1 FTE): M.Tech in AI/Data Science; deep expertise in PyTorch, TensorFlow Lite quantization, edge inferencing, and transfer learning for fine-grained biological species recognition.
@@ -197,11 +197,11 @@ Core Roles & Expertise:
 7. QA, Field Validation & Security Engineer (1 FTE): Test automation, load testing, network latency simulation, and OWASP/CERT-In vulnerability assessment protocols.
 
 Indicative Manpower Allocation by Phase:
-- Phase 1 (Discovery & Frame Survey): 4 Members (Fisheries Specialist, Architect, Biostatistician, GIS Specialist).
+- Phase 1 (Discovery & Frame Survey): 4 Members (Lead Applicant, Fisheries Specialist, Biostatistician, GIS Specialist).
 - Phase 2 (Design & Modeling): 6 Members (All technical leads engaged; statistical formulation finalized).
 - Phase 3 (Prototype & AI Development): 7 Members (Peak development effort across full-stack, AI, and GIS).
 - Phase 4 (Pilot Validation & Tuning): 5 Members (Focus on field deployment, bug triage, and statistical tuning).
-- Phase 5 (Security, Training & Handover): 4 Members (Architect, QA Engineer, Project Director, Training Lead).`
+- Phase 5 (Security, Training & Handover): 4 Members (Lead Applicant, QA Engineer, Fisheries Specialist, Training Lead).`
   },
   {
     number: 9,
@@ -311,9 +311,15 @@ export const ProposalViewer: React.FC = () => {
       <div className="bg-gradient-to-r from-emerald-950 via-slate-900 to-teal-950 text-white rounded-3xl p-8 shadow-xl border border-emerald-900">
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
           <div>
-            <div className="inline-flex items-center gap-2 bg-emerald-500/20 text-emerald-300 text-xs px-3 py-1 rounded-full border border-emerald-500/30 mb-3">
-              <Award className="w-3.5 h-3.5" />
-              <span>NESFIC 2026 • Official Application Submission Content</span>
+            <div className="flex flex-wrap items-center gap-2 mb-3">
+              <div className="inline-flex items-center gap-2 bg-emerald-500/20 text-emerald-300 text-xs px-3 py-1 rounded-full border border-emerald-500/30">
+                <Award className="w-3.5 h-3.5" />
+                <span>NESFIC 2026 • Official Application Submission Content</span>
+              </div>
+              <div className="inline-flex items-center gap-2 bg-blue-500/20 text-blue-200 text-xs px-3 py-1 rounded-full border border-blue-500/30">
+                <span className="font-semibold">Lead Applicant:</span>
+                <span className="font-bold text-white">Ron Hatibaruah</span>
+              </div>
             </div>
             <h1 className="text-3xl font-black tracking-tight">
               NESFIC-D-33 Proposal Submission Contents
