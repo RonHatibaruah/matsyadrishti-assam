@@ -8,12 +8,13 @@ import {
   FileText, 
   Wifi, 
   ShieldCheck, 
-  Layers 
+  Layers,
+  Settings
 } from 'lucide-react';
 
 interface NavbarProps {
-  activeTab: 'dashboard' | 'field-cas' | 'raising-engine' | 'gis-map' | 'proposal' | 'dossier';
-  setActiveTab: (tab: 'dashboard' | 'field-cas' | 'raising-engine' | 'gis-map' | 'proposal' | 'dossier') => void;
+  activeTab: 'dashboard' | 'field-cas' | 'raising-engine' | 'gis-map' | 'proposal' | 'dossier' | 'admin-console';
+  setActiveTab: (tab: 'dashboard' | 'field-cas' | 'raising-engine' | 'gis-map' | 'proposal' | 'dossier' | 'admin-console') => void;
   pendingSyncCount: number;
   userRole: 'demonstrator' | 'dfdo' | 'directorate';
   setUserRole: (role: 'demonstrator' | 'dfdo' | 'directorate') => void;
@@ -154,6 +155,19 @@ export const Navbar: React.FC<NavbarProps> = ({
               <ShieldCheck className="w-4 h-4" />
               <span>Proof of Work (PDF Dossier)</span>
             </button>
+
+            <button
+              onClick={() => setActiveTab('admin-console')}
+              className={`flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-bold transition-all ${
+                activeTab === 'admin-console'
+                  ? 'bg-indigo-600 text-white shadow-sm'
+                  : 'text-indigo-300 hover:text-white hover:bg-slate-800 border border-indigo-500/40'
+              }`}
+            >
+              <Settings className="w-4 h-4" />
+              <span>Admin Console</span>
+              <span className="w-2 h-2 rounded-full bg-indigo-400 animate-ping"></span>
+            </button>
           </nav>
 
           {/* User Role Switcher */}
@@ -221,6 +235,14 @@ export const Navbar: React.FC<NavbarProps> = ({
           }`}
         >
           PDF Dossier (10 Figs)
+        </button>
+        <button
+          onClick={() => setActiveTab('admin-console')}
+          className={`px-3 py-1.5 whitespace-nowrap rounded font-bold ${
+            activeTab === 'admin-console' ? 'bg-indigo-600 text-white' : 'text-indigo-300'
+          }`}
+        >
+          Admin Console
         </button>
       </div>
     </header>
